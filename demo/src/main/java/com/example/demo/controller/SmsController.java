@@ -50,8 +50,8 @@ public class SmsController {
 		
 		if ( mob.equalsIgnoreCase(result.get(id).getMob()) && template.equalsIgnoreCase(result.get(id).getSms_template()))
 		{
-			smsService.sendSMS(result.get(id).getMob() ,result.get(id).getSms_template(),result.get(id).getSms_event_id());
-			return new ResponseEntity(new CustomErrorType("Success","SMS Notification is sent !!!!!!"),HttpStatus.OK);
+			//smsService.sendSMS(result.get(id).getMob() ,result.get(id).getSms_template(),result.get(id).getSms_event_id());
+			return new ResponseEntity(new CustomErrorType("Success","SMS Notification is verified !!!!!!"),HttpStatus.OK);
 		}
 		
 		return new ResponseEntity(new CustomErrorType("Success","SMS Notification is Verified but not sent due to wrong Api !!!!!!"),HttpStatus.OK);
